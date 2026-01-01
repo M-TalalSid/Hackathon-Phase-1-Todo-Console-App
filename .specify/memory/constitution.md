@@ -1,55 +1,40 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: N/A → 1.0.0 (initial constitution for this project)
+Added principles: Deterministic correctness, Progressive architectural evolution, Minimalism first scalability later, Explicit separation of concerns, AI-assisted development without hidden magic, Phase-based implementation with clear boundaries
+Added sections: Phase constraints, Development Workflow
+Templates requiring updates: ⚠ pending - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
+Follow-up TODOs: RATIFICATION_DATE needs to be set to original adoption date
+-->
+# Evolution of a Todo Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Deterministic correctness
+Predictable behavior at every phase. All system behaviors must be deterministic and reproducible, with clear cause-and-effect relationships that can be traced and verified at each stage of development.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Progressive architectural evolution
+Each phase builds cleanly on the previous. Architecture must evolve incrementally with each phase, maintaining backward compatibility where possible and providing clear migration paths between phases.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Minimalism first, scalability later
+No premature optimization or over-engineering. Start with the simplest viable implementation that meets current requirements, with scalability considerations added in later phases when justified by actual needs.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Explicit separation of concerns
+UI, logic, data, infra. Maintain clear boundaries between user interface, business logic, data management, and infrastructure layers to ensure modularity and maintainability throughout the evolution.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### AI-assisted development without hidden magic
+AI usage must be transparent and explainable. All AI components must operate through defined APIs and interfaces with clear visibility into their decision-making processes, avoiding hidden or unexplainable behavior.
 
-### [PRINCIPLE_6_NAME]
+### Phase-based implementation with clear boundaries
+Each phase must be independently runnable and testable. All phases must have clear boundaries with well-defined inputs, outputs, and success criteria that allow for independent validation and testing.
 
+## Phase constraints
+Phase-based implementation with clear boundaries. Each phase must include architecture overview, data model definition, API or interface specification, and clear upgrade path to the next phase. No skipped phases or mixing of concerns across phases.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+Each phase must include architecture overview, data model definition, API or interface specification, and clear upgrade path to the next phase. All implementations must be independently runnable and testable, with clear data models defined before implementation and interfaces documented before being extended.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution governs all development activities for the Evolution of a Todo Application project. All architectural decisions, code implementations, and system evolutions must align with these principles. Amendments to this constitution require explicit documentation of the change, approval from project stakeholders, and a clear migration plan for existing implementations. Versioning follows semantic versioning principles: MAJOR for backward incompatible changes to governance or core principles, MINOR for new principles or expanded guidance, and PATCH for clarifications or typo fixes.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date unknown | **Last Amended**: 2026-01-02
